@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_customer"
+    app:startDestination="@id/homeFragment">
+
+    <!-- ── Home ── -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.homeserv.ui.customer.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <!-- ── Search ── -->
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.homeserv.ui.customer.search.SearchFragment"
+        android:label="Search">
+        <argument
+            android:name="categoryId"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="categoryName"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_search_to_provider"
+            app:destination="@id/providerDetailFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <!-- ── Provider Detail ── -->
+    <fragment
+        android:id="@+id/providerDetailFragment"
+        android:name="com.example.homeserv.ui.customer.provider.ProviderDetailFragment"
+        android:label="Provider">
+        <argument
+            android:name="providerId"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_provider_to_request"
+            app:destination="@id/requestServiceFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_provider_to_map"
+            app:destination="@id/mapFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <!-- ── Request Service ── -->
+    <fragment
+        android:id="@+id/requestServiceFragment"
+        android:name="com.example.homeserv.ui.customer.request.RequestServiceFragment"
+        android:label="Request Service">
+        <argument
+            android:name="providerId"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <!-- ── Orders ── -->
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.homeserv.ui.customer.orders.OrdersFragment"
+        android:label="Orders" />
+
+    <!-- ── Profile ── -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homeserv.ui.customer.profile.ProfileFragment"
+        android:label="Profile" />
+
+    <!-- ── Map ── -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.homeserv.ui.customer.map.MapFragment"
+        android:label="Map">
+        <argument
+            android:name="providerLat"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="providerLng"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="providerName"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── Brand ── -->
+    <color name="primary">#1565C0</color>
+    <color name="primary_light">#E3F2FD</color>
+    <color name="primary_dark">#0D47A1</color>
+    <color name="primary_gradient_end">#1976D2</color>
+
+    <!-- ── Backgrounds ── -->
+    <color name="background">#F5F7FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="input_background">#FAFAFA</color>
+
+    <!-- ── Text ── -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- ── Divider ── -->
+    <color name="divider">#E0E0E0</color>
+
+    <!-- ── Semantic ── -->
+    <color name="success">#2E7D32</color>
+    <color name="success_light">#E8F5E9</color>
+    <color name="error">#C62828</color>
+    <color name="error_light">#FFEBEE</color>
+    <color name="warning">#F57F17</color>
+    <color name="warning_light">#FFF8E1</color>
+    <color name="info">#1565C0</color>
+    <color name="info_light">#E3F2FD</color>
+
+    <!-- ── Rating ── -->
+    <color name="rating_gold">#F9A825</color>
+
+    <!-- ── Overlay ── -->
+    <color name="overlay_dark">#66000000</color>
+
+    <!-- ── Status Badge Colors ── -->
+    <color name="status_completed">#2E7D32</color>
+    <color name="status_completed_bg">#E8F5E9</color>
+    <color name="status_in_progress">#1565C0</color>
+    <color name="status_in_progress_bg">#E3F2FD</color>
+    <color name="status_cancelled">#C62828</color>
+    <color name="status_cancelled_bg">#FFEBEE</color>
+    <color name="status_pending">#F57F17</color>
+    <color name="status_pending_bg">#FFF8E1</color>
+
+    <!-- ── Category Icon Backgrounds ── -->
+    <color name="cat_plumbing">#E3F2FD</color>
+    <color name="cat_electrical">#FFF8E1</color>
+    <color name="cat_carpentry">#FBE9E7</color>
+    <color name="cat_cleaning">#E8F5E9</color>
+    <color name="cat_painting">#F3E5F5</color>
+    <color name="cat_ac">#E0F7FA</color>
+
+    <!-- ── Shadow / Scrim ── -->
+    <color name="shadow_color">#1A000000</color>
+    <color name="scrim">#40000000</color>
+
+</resources>

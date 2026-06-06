@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Blue header -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_primary_gradient"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/header_padding_horizontal"
+        android:paddingEnd="@dimen/header_padding_horizontal"
+        android:paddingBottom="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/register_title"
+            android:textColor="@color/text_on_primary"
+            android:textSize="@dimen/text_header_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/register_subtitle"
+            android:textColor="#CCffffff"
+            android:textSize="@dimen/text_body" />
+
+    </LinearLayout>
+
+    <!-- Scrollable form -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+            <!-- Form card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_padding_horizontal"
+                android:layout_marginEnd="@dimen/screen_padding_horizontal"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding_large">
+
+                    <!-- Full name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilFullName"
+                        style="@style/Widget.HomeServ.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/full_name"
+                        app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Email -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/Widget.HomeServ.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:hint="@string/email"
+                        app:startIconDrawable="@android:drawable/ic_dialog_email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Phone -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPhone"
+                        style="@style/Widget.HomeServ.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:hint="@string/phone_number"
+                        app:startIconDrawable="@android:drawable/ic_menu_call">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        style="@style/Widget.HomeServ.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Confirm password -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilConfirmPassword"
+                        style="@style/Widget.HomeServ.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:hint="@string/confirm_password"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Error container -->
+                    <LinearLayout
+                        android:id="@+id/layoutError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:background="@drawable/bg_error_container"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_size_standard"
+                            android:layout_height="@dimen/icon_size_standard"
+                            android:layout_marginEnd="8dp"
+                            android:src="@android:drawable/ic_dialog_alert"
+                            app:tint="@color/error" />
+
+                        <TextView
+                            android:id="@+id/tvError"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/error"
+                            android:textSize="@dimen/text_label" />
+
+                    </LinearLayout>
+
+                    <!-- Register button -->
+                    <Button
+                        android:id="@+id/btnRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/spacing_20"
+                        android:background="@drawable/bg_button_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/register"
+                        android:textColor="@color/text_on_primary"
+                        android:textSize="@dimen/text_button_large"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        android:visibility="gone"
+                        app:tint="@color/primary" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Security info card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_padding_horizontal"
+                android:layout_marginEnd="@dimen/screen_padding_horizontal"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/primary_light"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@android:drawable/ic_lock_idle_lock"
+                        app:tint="@color/primary" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Your data is encrypted and securely stored."
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_label" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Login link -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/have_account"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_body" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

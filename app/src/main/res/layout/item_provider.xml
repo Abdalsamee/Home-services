@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/screen_padding_horizontal"
+    android:layout_marginEnd="@dimen/screen_padding_horizontal"
+    android:layout_marginBottom="@dimen/card_gap"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <!-- Top row: avatar + info + badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Avatar -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProviderAvatar"
+                android:layout_width="@dimen/avatar_size_medium"
+                android:layout_height="@dimen/avatar_size_medium"
+                android:src="@drawable/ic_logo"
+                app:civ_border_color="@color/primary_light"
+                app:civ_border_width="2dp" />
+
+            <!-- Name + category -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProviderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="John Smith"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_card_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCategoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Plumbing"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_label" />
+
+                <!-- Rating row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:stepSize="0.5"
+                        android:progressTint="@color/rating_gold" />
+
+                    <TextView
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="0.0"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_label" />
+
+                    <TextView
+                        android:id="@+id/tvReviewCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="(0)"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_label" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Availability badge -->
+            <TextView
+                android:id="@+id/tvAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_badge"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="10dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="4dp"
+                android:text="Available"
+                android:textSize="@dimen/text_small" />
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/divider" />
+
+        <!-- Bottom row: distance + price + button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Distance -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="sans-serif"
+                    android:text="2.4 km"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_label" />
+
+            </LinearLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="$25/hr"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_label_medium"
+                android:textStyle="bold" />
+
+            <!-- View button -->
+            <Button
+                android:id="@+id/btnViewProvider"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_button_primary"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="View"
+                android:textColor="@color/text_on_primary"
+                android:textSize="@dimen/text_label_medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

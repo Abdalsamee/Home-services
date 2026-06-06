@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/screen_padding_horizontal"
+    android:layout_marginEnd="@dimen/screen_padding_horizontal"
+    android:layout_marginBottom="@dimen/card_gap"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <!-- Customer + status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Customer"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_card_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvProviderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Provider"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/text_label" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_badge_dynamic"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="10dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="4dp"
+                android:text="Pending"
+                android:textSize="@dimen/text_small" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/divider" />
+
+        <!-- Date + Total + Rating -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="2024-01-01 · 10:00 AM"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_label" />
+
+                <!-- Rating row — only visible when rated -->
+                <LinearLayout
+                    android:id="@+id/layoutRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:stepSize="0.5"
+                        android:progressTint="@color/rating_gold" />
+
+                    <TextView
+                        android:id="@+id/tvRatingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/rating_gold"
+                        android:textSize="@dimen/text_label" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="$25.00"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_label_medium"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Status update buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnInProgress"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_outlined"
+                android:fontFamily="sans-serif-medium"
+                android:text="In Progress"
+                android:textColor="@color/text_on_primary"
+                android:textSize="@dimen/text_small" />
+
+            <Button
+                android:id="@+id/btnComplete"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_primary"
+                android:fontFamily="sans-serif-medium"
+                android:text="Complete"
+                android:textColor="@color/text_on_primary"
+                android:textSize="@dimen/text_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Internet & Network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Storage (for image picking on older APIs) -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.HomeServ"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name="com.example.homeserv.ui.admin.AdminActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" /> <!-- Splash / Entry Point -->
+        <activity
+            android:name="com.example.homeserv.ui.auth.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HomeServ.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Auth Activities -->
+        <activity
+            android:name="com.example.homeserv.ui.auth.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.example.homeserv.ui.auth.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" /> <!-- Customer Main Activity -->
+        <activity
+            android:name="com.example.homeserv.ui.customer.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/adminDashboardFragment">
+
+    <!-- Dashboard -->
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.homeserv.ui.admin.dashboard.AdminDashboardFragment"
+        android:label="Dashboard" />
+
+    <!-- Requests -->
+    <fragment
+        android:id="@+id/adminRequestsFragment"
+        android:name="com.example.homeserv.ui.admin.requests.AdminRequestsFragment"
+        android:label="Requests" />
+
+    <!-- Providers -->
+    <fragment
+        android:id="@+id/adminProvidersFragment"
+        android:name="com.example.homeserv.ui.admin.providers.AdminProvidersFragment"
+        android:label="Providers">
+        <action
+            android:id="@+id/action_providers_to_addProvider"
+            app:destination="@id/adminAddProviderFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <!-- Add / Edit Provider -->
+    <fragment
+        android:id="@+id/adminAddProviderFragment"
+        android:name="com.example.homeserv.ui.admin.providers.AdminAddProviderFragment"
+        android:label="Provider">
+        <argument
+            android:name="providerId"
+            android:defaultValue=""
+            app:argType="string" />
+        <action
+            android:id="@+id/action_addProvider_to_mapPicker"
+            app:destination="@id/mapPickerFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <!-- Map Picker -->
+    <fragment
+        android:id="@+id/mapPickerFragment"
+        android:name="com.example.homeserv.ui.admin.providers.MapPickerFragment"
+        android:label="Pick Location">
+        <argument
+            android:name="initLat"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="initLng"
+            android:defaultValue="0.0"
+            app:argType="float" />
+    </fragment>
+
+    <!-- Categories -->
+    <fragment
+        android:id="@+id/adminCategoriesFragment"
+        android:name="com.example.homeserv.ui.admin.categories.AdminCategoriesFragment"
+        android:label="Categories">
+        <action
+            android:id="@+id/action_categories_to_addCategory"
+            app:destination="@id/adminAddCategoryFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <!-- Add / Edit Category -->
+    <fragment
+        android:id="@+id/adminAddCategoryFragment"
+        android:name="com.example.homeserv.ui.admin.categories.AdminAddCategoryFragment"
+        android:label="Category">
+        <argument
+            android:name="categoryId"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+</navigation>

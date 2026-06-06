@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── Screen Padding ── -->
+    <dimen name="screen_padding_horizontal">16dp</dimen>
+    <dimen name="screen_padding_vertical">16dp</dimen>
+    <dimen name="header_padding_horizontal">20dp</dimen>
+    <dimen name="header_padding_vertical">24dp</dimen>
+
+    <!-- ── Card ── -->
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_padding_large">20dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_gap">12dp</dimen>
+
+    <!-- ── Buttons ── -->
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_radius">12dp</dimen>
+    <dimen name="button_radius_pill">26dp</dimen>
+
+    <!-- ── Inputs ── -->
+    <dimen name="input_radius">12dp</dimen>
+    <dimen name="input_height">56dp</dimen>
+
+    <!-- ── Bottom Sheet ── -->
+    <dimen name="bottom_sheet_radius">24dp</dimen>
+
+    <!-- ── Dialog ── -->
+    <dimen name="dialog_radius">16dp</dimen>
+    <dimen name="dialog_padding">24dp</dimen>
+
+    <!-- ── Icons ── -->
+    <dimen name="icon_size_standard">20dp</dimen>
+    <dimen name="icon_size_bottom_nav">22dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    <dimen name="icon_container_size">48dp</dimen>
+
+    <!-- ── Spacing ── -->
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+    <dimen name="spacing_48">48dp</dimen>
+
+    <!-- ── Typography ── -->
+    <dimen name="text_splash_title">32sp</dimen>
+    <dimen name="text_header">22sp</dimen>
+    <dimen name="text_header_large">24sp</dimen>
+    <dimen name="text_card_title">16sp</dimen>
+    <dimen name="text_card_title_large">18sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_label">12sp</dimen>
+    <dimen name="text_label_medium">13sp</dimen>
+    <dimen name="text_button">15sp</dimen>
+    <dimen name="text_button_large">16sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+
+    <!-- ── Avatar / Profile ── -->
+    <dimen name="avatar_size_small">40dp</dimen>
+    <dimen name="avatar_size_medium">64dp</dimen>
+    <dimen name="avatar_size_large">96dp</dimen>
+    <dimen name="avatar_size_hero">120dp</dimen>
+
+    <!-- ── Bottom Navigation ── -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+
+    <!-- ── Logo Card ── -->
+    <dimen name="logo_card_size">100dp</dimen>
+    <dimen name="logo_card_radius">20dp</dimen>
+
+    <!-- ── Banner ── -->
+    <dimen name="banner_height">160dp</dimen>
+    <dimen name="banner_radius">16dp</dimen>
+
+    <!-- ── Chip ── -->
+    <dimen name="chip_radius">20dp</dimen>
+    <dimen name="chip_height">36dp</dimen>
+
+    <!-- ── Divider ── -->
+    <dimen name="divider_height">1dp</dimen>
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Icon container -->
+        <FrameLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_circle">
+
+            <ImageView
+                android:id="@+id/ivCategoryIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_logo" />
+
+        </FrameLayout>
+
+        <!-- Category name -->
+        <TextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Plumbing"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_label_medium" />
+
+        <!-- Provider count -->
+        <TextView
+            android:id="@+id/tvProviderCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="12 providers"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_small" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
