@@ -22,9 +22,9 @@
 |:---:|:---:|:---:|
 | ![Dashboard](screenshots/07_admin_dashboard.png) | ![Requests](screenshots/08_admin_requests.png) | ![Providers](screenshots/09_admin_providers.png) |
 
-| Map Location Picker | &nbsp; | &nbsp; |
+| Map Location Picker | Provider Detail | Request Service |
 |:---:|:---:|:---:|
-| ![Map](screenshots/10_map_picker.png) | | |
+| ![Map](screenshots/10_map_picker.png) | ![Provider1](screenshots/04_provider_detail_mahmoud.png) | ![Request](screenshots/06_request_service.png) |
 
 ---
 
