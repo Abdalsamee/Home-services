@@ -22,9 +22,9 @@
 |:---:|:---:|:---:|
 | ![Dashboard](screenshots/07_admin_dashboard.png) | ![Requests](screenshots/08_admin_requests.png) | ![Providers](screenshots/09_admin_providers.png) |
 
-| Map Location Picker |
-|:---:|
-| ![Map](screenshots/10_map_picker.png) |
+| Map Location Picker | &nbsp; | &nbsp; |
+|:---:|:---:|:---:|
+| ![Map](screenshots/10_map_picker.png) | | |
 
 ---
 
